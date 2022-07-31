@@ -11,7 +11,7 @@ const {
     Presence,
     Mimetype,
     GroupSettingChange
-} = require('@adiwajshing/baileys')
+} 
 /******BEGIN OF FILE INPUT******/
 const { color, bgcolor } = require('./lib/color')
 const { bahasa } = require('./src/bahasa')
@@ -236,7 +236,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ ESPERE UM POUCO AE MANO ⌛',
+				wait: '⌛ É PRA JÁ PARÇA ⌛',
 				success: '✔️ Sucesso ✔️',
 				levelon: '❬ ✔ ❭ *Ativado leveling*',
 				leveloff: ' ❬ X ❭  *Desativado leveling*',
@@ -1449,8 +1449,8 @@ async function starts() {
 				case 'stiker':
 				case 'sticker':
 				case 'fig':
-				case 'stickergif':
-				case 'stikergif':
+				case 's':
+				case 'minhapika':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
